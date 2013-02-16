@@ -1,0 +1,85 @@
+* {
+	padding:0px;
+	margin:0px;
+	font-family: 'comic sans ms';
+}
+
+body {
+	background-color: hotpink;
+}
+
+h1, h2, h3, h4, a {
+	color: hotpink;
+	-webkit-text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+    -moz-text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+    text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+}
+
+h1 {
+	float:left;
+	font-size:88px;
+}
+
+p {
+	margin-bottom:20px;
+}
+
+header {
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: hotpink;
+	font-size:24px;
+	font-weight: bold;
+}
+
+nav ul {
+	margin-top:30px;
+	float: right;
+	list-style: none;
+	display:block;
+}
+
+nav li {
+	border-radius: 15px;
+	float:left;
+	padding:10px 15px;
+	background-color: hotpink;
+	margin-right:10px;
+	margin-bottom: 15px;
+	-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+}
+
+li a {
+	color: #fff;
+}
+
+header img {
+	float:left;
+}
+
+#wrapper {
+	left:50%;
+	margin-left:-400px;
+	width: 800px;
+	background-color: #fff;
+	padding:25px;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	overflow: auto;
+	padding-top:0px;
+}
+
+.seperator {
+	clear:both;
+	border:none;
+	border-top:dashed 10px hotpink;
+	margin-bottom:30px;
+	margin-left:-25px;
+	margin-right:-25px;
+}
