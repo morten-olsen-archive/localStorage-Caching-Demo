@@ -35,7 +35,7 @@ class ResourceSession {
 	}
 
 	public function save() {
-		$json = json_encode($this->ressource);
+		$json = json_encode($this->resource);
 		file_put_contents($this->cacheName(), $json);
 	}
 
