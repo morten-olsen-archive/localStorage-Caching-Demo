@@ -9,23 +9,21 @@ class ResourceSession {
 
 		if ($this->id == '') {
 			$this->id = uniqid();
-			setcookie('s',$this->id,time() + (86400 * 7));
+			setcookie('s',$this->id,time() + (86400 * 365), '/');
+		} else {
+			$this->load();
+			foreach ($_COOKIE as $key => $value) {
+				if (strpos($key, 'c_') === 0) {
+					$this->resource[$key] = $value;
+					setcookie($key,$value,time() - 10, '/');
+				}
+			}
+			$this->save();
 		}
-		$this->load();
 	}
 
 	public function cacheName() {
 		return 'cache/rs_' . $this->id;
-	}
-
-	public function track() {
-		foreach ($_COOKIE as $key => $value) {
-			if (strpos($key, 'c_') === 0) {
-				$this->resource[$key] = $value;
-				setcookie($key,$value,1);
-			}
-		}
-		$this->save();
 	}
 
 	public function load() {
@@ -42,6 +40,9 @@ class ResourceSession {
 	}
 
 	public function hasResource($name, $manager) {
+		if ($this->resource == null) {
+			return false;
+		}
 		$res = $manager->resources[$name];
 		return array_key_exists('c_' . $name, $this->resource) 
 			&& $this->resource['c_' . $name] == $res->version;

@@ -12,10 +12,6 @@ $session = new ResourceSession();
 // user have.
 $session->init();
 
-// Next we need to update the users list of resources, so any newly
-// aquired resources are added to the user element.
-$session->track();
-
 // We need a list of servable resources. These are split into "wrapper"
 // types, which is the object it will be wrapped in. It would make sens
 // to do things diffrently for HTML parts, since you just want the root
