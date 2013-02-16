@@ -26,6 +26,23 @@ p {
 	text-align: justify;
 }
 
+p {
+	color: #fff;
+	-webkit-text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+    -moz-text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+    text-shadow: 0px 2px 0px rgba(219,31,5,1), 0px 2px 5px rgba(0,0,0,.7);
+    background-color:hotpink;
+    padding:5px; 20px;
+	-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 15px rgba(0,0,0,.7);
+}
+
+p a {
+	color:white;
+	text-decoration: underline;
+}
+
 header {
 	float: left;
 }
