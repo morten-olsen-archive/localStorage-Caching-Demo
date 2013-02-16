@@ -2,7 +2,7 @@
 	<head>
 		<? $styles->load('default', true); ?>
 		<? $scripts->load('jquery', true); ?>
-		<? $scripts->load('snowstorm', false); ?>
+		<? $scripts->load('snowstorm', true); ?>
 		<? $scripts->load('cacheloader', false); ?>
 	</head>
 	<body>
