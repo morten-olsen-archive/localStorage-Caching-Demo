@@ -79,7 +79,7 @@ header img {
 .seperator {
 	clear:both;
 	border:none;
-	border-top:dashed 10px hotpink;
+	border-top:groove 30px hotpink;
 	margin-bottom:30px;
 	margin-left:-25px;
 	margin-right:-25px;

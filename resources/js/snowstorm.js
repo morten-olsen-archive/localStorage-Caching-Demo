@@ -39,7 +39,7 @@ snow = {
     do {
       snow.flakes.push(new snow.flake());
     } while(--c);
-    snow.ct.fillRect(0,0,snow.cv.width,snow.cv.height);
+    //snow.ct.fillRect(0,0,snow.cv.width,snow.cv.height);
     window.snowtimer = window.setInterval(snow.draw, snow.delay);
     window.addEventListener('resize',snow.resize);
   },
@@ -51,6 +51,15 @@ snow = {
   },
   draw: function() {
     var ct = snow.ct, f = snow.flakes, c = snow.count;
+    var lineargradient = ct.createLinearGradient(0,0,0,250);
+    lineargradient.addColorStop(0,'red');
+    lineargradient.addColorStop(0.32,'blue');
+    lineargradient.addColorStop(0.48,'green');
+    lineargradient.addColorStop(0.64,'yellow');
+    lineargradient.addColorStop(0.80,'orange');
+    lineargradient.addColorStop(0.96,'red');
+    lineargradient.addColorStop(1,'hotpink');
+    ct.fillStyle = lineargradient;
     ct.fillRect(0,0,snow.cv.width,snow.cv.height);
 
     do {
