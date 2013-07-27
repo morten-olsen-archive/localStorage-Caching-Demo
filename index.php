@@ -28,6 +28,7 @@ $page = 'home';
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 }
+
 // This.. this right here, was the thing i mentioned earlier, being
 // something woth noticing.
 include('pages/master.php');
